@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>問い合わせ - k650250の個人サイト</title>
+    <meta name="description" content="k650250の個人サイトの問い合わせフォーム" />
+    <meta name="author" content="k650250" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">トップ</a></li>
+                <li><a href="contact.html">問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="wrapper">
+        <main>
+            <h1>問い合わせフォーム</h1>
+            <form action="https://api.staticforms.xyz/submit" method="post">
+                <div class="label-container"><label for="contact-form-name">お名前</label></div>
+                <input type="text" name="name" id="contact-form-name" />
+                <div class="label-container"><label for="contact-form-email">メールアドレス</label></div>
+                <input type="text" name="email" id="contact-form-email" />
+                <div class="label-container"><label for="contact-form-message">メッセージ</label></div>
+                <textarea name="message" id="contact-form-message"></textarea>
+                <input type="text" name="honeypot" style="display: none;" />
+                <input type="hidden" name="accessKey" value="c9962567-5f1a-4187-a831-a20e65343912" />
+                <input type="hidden" name="subject" value="k650250の個人サイトの問い合わせフォームから" />
+                <input type="hidden" name="replyTo" value="@" />
+                <input type="hidden" name="redirectTo" value="http://localhost/httpdocs/contact_success.html" />
+                <div class="button-container"><input type="submit" name="contact-form-submit" id="contact-form-submit" /></div>
+            </form>
+        </main>
+
+        <footer><br />&copy; All rights reserved.</footer>
+    </div> <!-- id="wrapper" -->
+</body>
+
+</html>
