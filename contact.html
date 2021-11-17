@@ -25,7 +25,7 @@
     <div id="wrapper">
         <main>
             <h1>問い合わせフォーム</h1>
-            <form action="https://api.staticforms.xyz/submit" method="post">
+            <form id="#contact-form" action="https://api.staticforms.xyz/submit" method="post">
                 <div class="label-container"><label for="contact-form-name">お名前</label></div>
                 <input type="text" name="name" id="contact-form-name" />
                 <div class="label-container"><label for="contact-form-email">メールアドレス</label></div>
@@ -39,6 +39,27 @@
                 <input type="hidden" name="redirectTo" value="http://localhost/httpdocs/contact_success.html" />
                 <div class="button-container"><input type="submit" name="contact-form-submit" id="contact-form-submit" /></div>
             </form>
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+            <script>
+                $(function () {
+                    $("#contact-form").validate({
+                        rules: {
+                            name: {
+                                required: "*お名前を入力してください",
+                                rangelength: [1, 50],
+                            },
+                            email: {
+                                required: "*メールアドレスを入力してください",
+                                email: "*正しいメールアドレス形式で入力してください",
+                            },
+                            message: {
+                                required: "*メッセージを入力してください"
+                            }
+                        }
+                    });
+                });
+            </script>
         </main>
 
         <footer><br />&copy; All rights reserved.</footer>
