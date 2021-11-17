@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE root SYSTEM "key-value.dtd">
+
+<root>
+    <data key="氏名">北川　一樹</data>
+    <data key="メールアドレス"><a href="contact.html">k650250@gmail.com</a></data>
+    <data key="生年月日"><time id="date-of-birth" datetime="1986-09-17">昭和61年9月17日</time></data>
+    <data key="性別">男</data>
+</root>
