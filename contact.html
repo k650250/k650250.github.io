@@ -43,6 +43,9 @@
             <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
             <script>
                 $(function () {
+                    // 最初の入力欄にフォーカスを当てる
+                    $('input:visible').eq(0).focus();
+                    // 入力文字列の妥当性評価
                     $("#contact-form").validate({
                         rules: {
                             name: {
