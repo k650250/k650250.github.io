@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE root SYSTEM "key-value.dtd">
+
+<root>
+    <data key="Name">Kitagawa, Kazuki</data>
+    <data key="Email address"><a href="contact.html">k650250@gmail.com</a></data>
+    <data key="D.O.B."><time id="date-of-birth" datetime="1986-09-17">September 17 <span style="font-size: x-small;">UTC+0900</span> 1986</time></data>
+    <data key="Gender">male</data>
+</root>

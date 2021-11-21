@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>問い合わせ - k650250の個人サイト</title>
+    <meta name="description" content="k650250の個人サイトの問い合わせフォーム" />
+    <meta name="author" content="k650250" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+    <script type="text/javascript" src="string-init.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="refresh-view.js" charset="UTF-8"></script>
+    <header>
+        <nav>
+            <ul>
+                <li id="lang-select-container">
+                    <label for="lang-select">Language:</label>
+                    <select id="lang-select">
+                        <option hidden></option>
+                        <option value="ja">日本語</option>
+                        <option value="C">English</option>
+                    </select>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <span class="string" data-key="top">トップ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <span class="string" data-key="contact">問い合わせ</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="wrapper">
+        <main>
+            <h1><span class="string" data-key="contact-form">問い合わせフォーム</span></h1>
+            <form id="contact-form" action="https://api.staticforms.xyz/submit" method="post">
+                <div class="label-container"><label for="contact-form-name"><span class="string" data-key="name">お名前</span></label></div>
+                <input type="text" name="name" id="contact-form-name" />
+                <div class="label-container"><label for="contact-form-email"><span class="string" data-key="email">メールアドレス</span></label></div>
+                <input type="text" name="email" id="contact-form-email" />
+                <div class="label-container"><label for="contact-form-message"><span class="string" data-key="message">メッセージ</span></label></div>
+                <textarea name="message" id="contact-form-message"></textarea>
+                <input type="text" name="honeypot" style="display: none;" />
+                <input type="hidden" name="accessKey" value="c9962567-5f1a-4187-a831-a20e65343912" />
+                <input type="hidden" name="subject" value="k650250の個人サイトの問い合わせフォームから" />
+                <input type="hidden" name="replyTo" value="@" />
+                <input type="hidden" name="redirectTo" value="https://k650250.github.io/contact_success.html" />
+                <div class="button-container"><input type="submit" name="contact-form-submit" id="contact-form-submit" /></div>
+            </form>
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+            <script>
+                $(function () {
+                    // 最初の入力欄にフォーカスを当てる
+                    $('input:visible').eq(0).focus();
+                    // 入力文字列の妥当性評価
+                    $("#contact-form").validate({
+                        rules: {
+                            name: {
+                                required: "*お名前を入力してください",
+                                rangelength: [1, 50],
+                            },
+                            email: {
+                                required: "*メールアドレスを入力してください",
+                                email: "*正しいメールアドレス形式で入力してください",
+                            },
+                            message: {
+                                required: "*メッセージを入力してください"
+                            }
+                        }
+                    });
+                });
+            </script>
+        </main>
+
+        <footer><br />&copy; All rights reserved.</footer>
+    </div> <!-- id="wrapper" -->
+    <script type="text/javascript" src="string-apply.js" charset="UTF-8"></script>
+</body>
+
+</html>

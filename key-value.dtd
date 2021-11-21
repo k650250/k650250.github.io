@@ -1,0 +1,5 @@
+<!DOCTYPE root [
+    <!ELEMENT root (data)* >
+    <!ELEMENT data (#PCDATA) >
+    <!ATTLIST data key ID #REQUIRED >
+]>
