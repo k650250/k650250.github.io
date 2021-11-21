@@ -38,4 +38,4 @@
     xmlhttp.open('GET', url, true);
     xmlhttp.overrideMimeType('text/xml');
     xmlhttp.send();
-})("res/my-static-profile.xml");
+})("res/my-static-profile-ja.xml");
