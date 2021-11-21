@@ -17,7 +17,7 @@ function stringInit(url) {
             const keyrecord = xmlhttp.responseXML.getElementById('key');
             let valuerecord;
 
-            if (langselect.value == "") {
+            if (!langselect || langselect.value == "") {
                 const languages =  window.navigator.languages || window.navigator.language || window.navigator.userLanguage || window.navigator.browserLanguage;
 
                 for (let language of languages) {
