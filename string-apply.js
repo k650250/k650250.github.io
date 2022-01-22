@@ -1,4 +1,4 @@
-// -*- coding: UTF-8; -*-
+// -*- coding: utf-8; -*-
 
 function stringApply() {
     const set_interval_id = setInterval(stringApplyInterval, 1);
